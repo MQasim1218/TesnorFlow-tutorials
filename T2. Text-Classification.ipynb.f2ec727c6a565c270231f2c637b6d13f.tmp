@@ -1,0 +1,19 @@
+exp_model = tfk.Sequential([
+    vec_layer,
+    model,
+    tf.nn.sigmoid()
+])
+
+exp_model.compile(
+    optimizer= opts.Adam,
+    loss= losses.BinaryCrossentropy(form_logits= False),
+    metrics= ['accuracy']
+)
+
+f_loss, f_acc =  exp_model.evaluate(
+    raw_test_ds,
+    verbose=2
+)
+
+print(f"The Final loss of the model is {f_loss}")
+print(f"The Final loss of the model is {f_loss}")
