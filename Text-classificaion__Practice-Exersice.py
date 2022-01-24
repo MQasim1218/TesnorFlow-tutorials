@@ -53,8 +53,6 @@ RawTrainDataset = tfk.utils.text_dataset_from_directory(
 )
 
 # print(RawTrainDataset)
-# Label 0 corresponds to neg
-# Label 1 corresponds to pos
 
 
 for txt_b, lbl_b in RawTrainDataset.take(1):
